@@ -10,6 +10,7 @@ class Roulette:
         self.bullet = 0
         self.round = 0
         self.rand_bullet = 0
+        self.trigger = 0
 
     def initalize_game(self):
         self.number_player = int(input('Combien de joueurs êtes vous ? :\n'))
@@ -30,3 +31,7 @@ class Roulette:
                     self.bullet, self.barillet))
 
     def random_bullet(self):
+        self.rand_bullet = random.randint(1, 6)
+
+    def pull_trigger(self):
+        self.trigger += 1
